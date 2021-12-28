@@ -1,0 +1,27 @@
+@using Model
+
+<tr>
+    <th scope="row">@Location.Id</th>
+    <td>@Location.Name</td>
+    <td>
+        @*@(Location.Active?"Activo":"Inactivo")*@
+        @if (Location.Active)
+        {
+            <div class="badge bg-success"><span class="oi oi-check"></span> Active</div>
+
+        }
+        else
+        {
+            <div class="badge bg-warning">Inactive</div>
+        }
+    </td>
+    <td><input class="form-check-input" type="checkbox" @bind-value="Location.Active" checked="@(Location.Active?"checked":null)" /></td>
+    <td>
+        <Buttons IsAdmin="true"></Buttons>
+    </td>
+</tr>
+
+@code {
+    [Parameter]
+    public BlazorLocation Location { get; set; }
+}

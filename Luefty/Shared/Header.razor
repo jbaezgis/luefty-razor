@@ -23,6 +23,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item p-2">
+                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home </NavLink>
+                        </li>
+                        <li class="nav-item dropdown p-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                DB
+                                @*<span class="oi oi-chevron-bottom fw-light"></span>*@
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item">
+                                    <NavLink class="dropdown-item" href="locations/countries">Countries</NavLink>
+                                </li>
+                                <li class="nav-item">
+                                    <NavLink class="dropdown-item" href="locations/locations">Locations</NavLink>
+                                </li>
+                                <li class="nav-item">
+                                    <NavLink class="dropdown-item" href="city-to-city">Services</NavLink>
+                                </li>
+
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown p-2">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Our services
@@ -49,9 +70,6 @@
                                 <li><a class="dropdown-item" href="#">Strategic partnerships</a></li>
                             </ul>
                         </li>
-                        @*<li class="nav-item">
-                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home </NavLink>
-                        </li>*@
                         <li class="nav-item p-2">
                             <NavLink class="nav-link" href="help">Help</NavLink>
                         </li>

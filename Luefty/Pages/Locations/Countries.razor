@@ -1,0 +1,25 @@
+﻿@page "/locations/countries"
+@using Model
+
+<h3>Countries</h3>
+
+@code {
+
+    @*string SelectCountries = "";*@
+
+    List<BlazorLocation> LocationsList = new List<BlazorLocation>();
+
+    BlazorLocation Location = new BlazorLocation()
+    {
+        Id = 1,
+        Name = "Santo Domingo",
+        Active = true,
+        BlazorCountries = new List<BlazorCountry>
+        {
+            new Model.BlazorCountry{Id=1,Name="Republica Dominicana"},
+            new Model.BlazorCountry{Id=2,Name="Mexico"},
+            new Model.BlazorCountry{Id=3,Name="España"},
+        }
+    };
+}
+

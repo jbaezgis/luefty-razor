@@ -1,0 +1,11 @@
+﻿@if (IsAdmin)
+{
+<button class="btn btn-primary btn-sm"><span class="oi oi-pencil"></span> </button>
+<button class="btn btn-danger btn-sm"><span class="oi oi-trash"></span> </button>
+}
+
+@code
+{
+    [Parameter]
+    public bool IsAdmin { get; set; }
+}

@@ -1,0 +1,66 @@
+﻿@page "/locations/locations"
+@using Model
+
+<div class="container py-4">
+    <h3>Locations</h3>
+
+    @*<select class="form-select" @bind="SelectCountries">
+        @foreach (var country in Location.BlazorCountries)
+        {
+            <option value="@country.Name">@country.Name</option>
+        }
+    </select>*@
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Country</th>
+                <th scope="col">Name</th>
+                <th scope="col">Active</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var location in LocationsList)
+            {
+                <IndividualLocation Location="@location"></IndividualLocation>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@code {
+
+    @*string SelectCountries = "";*@
+
+    List<BlazorLocation> LocationsList = new List<BlazorLocation>();
+
+    BlazorLocation Location = new BlazorLocation()
+    {
+        Id = 1,
+        Name = "Santo Domingo",
+        Active = true
+    };
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        LocationsList.Add(new BlazorLocation()
+        {
+            Id = 1,
+            Name = "Santo Domingo",
+            Active = true
+        });
+
+        LocationsList.Add(new BlazorLocation()
+        {
+            Id = 2,
+            Name = "Punta Cana",
+            Active = false
+        });
+    }
+}
+

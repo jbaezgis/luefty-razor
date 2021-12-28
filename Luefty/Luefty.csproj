@@ -11,5 +11,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\js\" />
+    <Folder Include="Model\" />
+    <Folder Include="Pages\Locations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Model\" />
+    <None Remove="Pages\Locations\" />
   </ItemGroup>
 </Project>
